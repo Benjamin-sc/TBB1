@@ -1,4 +1,4 @@
-# TBB1
+# TBB1 introduction
 3D mapping of the Thickness by Bi1+
 
 In ToF-SIMS analysis, it has been shown that the substrate signal (Si+ in our case) is exponentially dependent of the material thickness over the substrate [1]. Therefore, to effectively measure the thickness on of thin films, an image of the substrate signal Si+ can be obtained using Bi1 + primary ions (Fig. 1A). Using a calibration (Fig. 1B) conducted the molecule reference samples of known thickness (ellipsometry or other technique), these Si+ ion images can transformed in 3D maps of the deposited thickness. The example shown figure 1 illustrates the 3D map thickness of a lysozyme layer on silicon.
@@ -9,7 +9,7 @@ Since the construction of these 3D maps from Si+ ion images is not straightforwa
 
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
 
-Download and use the pyTBB1.
+# Download and use the pyTBB1.
 
 Presteps before use it:
     
@@ -28,25 +28,25 @@ Figure 2 shows the python platform. It is constructed in three containers:
 - Calculator
 - Plot
 
-*Loading and smoothing*
+
 First you load the images (they will appear below). You load the Si+ ion image and you can also load the total intensity image. The latter will be used to normalize in order to be independant of the Bi1 current. Then you can smooth the 3D plot that and the result will be shown. 
-*Calculator*
+
 Then you enter several analysis parameters (there is an interogation button to have explanation about these parameters). After you have to click on conversion button.
 Subsequently you select a molecule in the library or you enter new coefficients of the calibration (exponetial expression, Counts = a.exp(-b.Thickness))
 If you do a mistake or forget something an error message will guide you.
-*Plot*
+
 You can plot the final 3D map here. You can decide if you want to apply the calibration and the normalization (with the checkboxes). You can also choose the colormap of the final plot.
 
 ![image](https://user-images.githubusercontent.com/80101412/144440495-c021b3cc-ab5b-4755-99c9-6608d77dcf3d.png)
 
 
-Download and use the AppTBB1.
+# Download and use the AppTBB1.
 
 Presteps before use it:
     
 1) First download all the files. "calibration library.xlsx" are my calibration datas. You may uptdate this file to use your own calibration.
 
-2) The platform open directly. You have to change the folder path and use the path were you images are. If you want to edit the application. Enter >> appdesigner in the command and open the file AppTBB1.mlapp in the application designer.
+2) The platform open directly. You have to change the folder path and use the path were you images are. If you want to edit the application, enter >> appdesigner in the command and open the file AppTBB1.mlapp in the application designer.
 
 
 
