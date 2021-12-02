@@ -6,6 +6,7 @@ In ToF-SIMS analysis, it has been shown that the substrate signal (Si+ in our ca
 Since the construction of these 3D maps from Si+ ion images is not straightforward and involves several parameters and data processing, 2 platforms were developped. These platforms that were developed (Thickness By Bi1) allow to load the analysis images, perform smoothing, calibration, normalization and manage the thickness mapping in a user friendly way. Two verion are available. One is in python (pyTBB1) and the other one in MATLAB (AppTBB1).
 
 ![image](https://user-images.githubusercontent.com/80101412/144432057-2af652da-ca4e-40cb-b0a9-ac99995c13d0.png)
+*Fig. 1. Method for the thickness mapping. First Si+ is imaged (A). Then, the 3D thickness map (c) is plotted using the platforms and the calibration curve (B) for a specific molecule (lysozyme in this case).*
 
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
 
@@ -35,10 +36,10 @@ Then you enter several analysis parameters (there is an interogation button to h
 Subsequently you select a molecule in the library or you enter new coefficients of the calibration (exponetial expression, Counts = a.exp(-b.Thickness))
 If you do a mistake or forget something an error message will guide you.
 
-You can plot the final 3D map here. You can decide if you want to apply the calibration and the normalization (with the checkboxes). You can also choose the colormap of the final plot.
+Finally, you can plot the final 3D map with the "plot" button. You can decide if you want to apply the calibration and the normalization (with the checkboxes). You can also choose the colormap of the final plot.
 
 ![image](https://user-images.githubusercontent.com/80101412/144440495-c021b3cc-ab5b-4755-99c9-6608d77dcf3d.png)
-
+*Fig. 2. pyTBB1 platform.*
 
 # Download and use the AppTBB1.
 
@@ -48,7 +49,18 @@ Presteps before use it:
 
 2) The platform open directly. You have to change the folder path and use the path were you images are. If you want to edit the application, enter >> appdesigner in the command and open the file AppTBB1.mlapp in the application designer.
 
+Figure 3 shows the MATLAB platform. It is constructed in three containers: 
+- Loading and smoothing
+- Calculator
+- Plot
+
+First you load the Si+ image. The format needs to be in Tiff and you have to write the name of the file (and the file needs to be in the folder path). Then, you can choose to load the entire image or to crop it. The image will appear in the prewiew. You can smooth the image with the slider just below the preview.
+
+Then you enter several analysis parameters (there is an interogation button to have explanation about these parameters). If you want normalize you have to enter the name of the total intensity image and click on "load" button. Subsequently you select a molecule in the library or you enter new coefficients of the calibration (exponetial expression, Counts = a.exp(-b.Thickness)). You can update the molecular library by changing the values in the "function TreeSelectionChanged(app, event)" line 314.
+There is also a button "show calibration curve" to plot the calibration of the selected molecule. You can update the related excel folder "calibration library.xlsx" and the "function ShowcalibrationcurveButtonPushed(app, event)" line 343.
+
+Finally, you can plot a preview of the final 3D map with the "3D map preview" button. You can decide if you want to apply the calibration and the normalization (with the checkboxes). After that, you choose the color of the colormap and generate the final 3D map.
 
 
 ![image](https://user-images.githubusercontent.com/80101412/144444346-e9ac1bb3-9d77-4a24-9ac1-dc3fc5444c8f.png)
-
+*Fig. 3. AppTBB1 platform.*
