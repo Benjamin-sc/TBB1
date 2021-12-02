@@ -10,3 +10,5 @@ Since the construction of these 3D maps from Si+ ion images is not straightforwa
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
 
 Download and use the platforms.
+
+Firslty download all the files. Indeed TBB1.png is an illustrative image and icon.ico is the icon of the platform. If these files are not in the same folder as the python and MATLAB script, you will have an error message.
