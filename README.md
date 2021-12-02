@@ -26,12 +26,16 @@ Presteps before use it:
 Figure 2 shows the python platform. It is constructed in three containers: 
 - Loading and smoothing
 - Calculator
-- PLot
+- Plot
 
+*Loading and smoothing*
 First you load the images (they will appear below). You load the Si+ ion image and you can also load the total intensity image. The latter will be used to normalize in order to be independant of the Bi1 current. Then you can smooth the 3D plot that and the result will be shown. 
+*Calculator*
 Then you enter several analysis parameters (there is an interogation button to have explanation about these parameters). After you have to click on conversion button.
-Subsequently you select a molecule in the library or you enter new coefficients of the calibration (exponetial expression, Counts = a*exp(-b*Thickness))
+Subsequently you select a molecule in the library or you enter new coefficients of the calibration (exponetial expression, Counts = a.exp(-b.Thickness))
 If you do a mistake or forget something an error message will guide you.
+*Plot*
+You can plot the final 3D map here. You can decide if you want to apply the calibration and the normalization (with the checkboxes). You can also choose the colormap of the final plot.
 
 ![image](https://user-images.githubusercontent.com/80101412/144440495-c021b3cc-ab5b-4755-99c9-6608d77dcf3d.png)
 
@@ -42,5 +46,9 @@ Presteps before use it:
     
 1) First download all the files. "calibration library.xlsx" are my calibration datas. You may uptdate this file to use your own calibration.
 
-2) The platform open directly. You have to change the folder path and use the path were you images are. If you want to edit the application. Enter >> appdesigner in the command and open the file A
+2) The platform open directly. You have to change the folder path and use the path were you images are. If you want to edit the application. Enter >> appdesigner in the command and open the file AppTBB1.mlapp in the application designer.
+
+
+
+![image](https://user-images.githubusercontent.com/80101412/144444346-e9ac1bb3-9d77-4a24-9ac1-dc3fc5444c8f.png)
 
