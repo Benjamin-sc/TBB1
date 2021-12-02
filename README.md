@@ -9,6 +9,30 @@ Since the construction of these 3D maps from Si+ ion images is not straightforwa
 
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
 
-Download and use the platforms.
+Download and use the pyTBB1.
 
-Firslty download all the files. Indeed TBB1.png is an illustrative image and icon.ico is the icon of the platform. If these files are not in the same folder as the python and MATLAB script, you will have an error message.
+Presteps before use it:
+    
+1) Firslty download all the files. Indeed "TBB1.png" is an illustrative image and "icon.ico" is the icon of the platform. If these files are not in the same folder as the python and MATLAB script, you will have an error message. 
+    
+2) Redifine you file_path  in the function pushLoadImage1 (line 449) and pushLoadImage2 (line 504). So that when you load your images the right folder place is opened.
+    
+3) Ensure to have all the python libraries needed. Otherwise you need to install them. For example scipy is not always available directly in all the versions.
+    
+4) Update the molecular library with your coefficients and molecules (line 330 to 341). If you are not familiar with trees construction in python, you can enter new coefficients directly in the GUI.
+    
+5) If you are facing problems to load images try to use the more adapted format: .png
+
+Figure 2 shows the python platform. It is constructed in three containers: 
+- Loading and smoothing
+- Calculator
+- PLot
+
+First you load the images (they will appear below). You load the Si+ ion image and you can also load the total intensity image. The latter will be used to normalize in order to be independant of the Bi1 current. Then you can smooth the 3D plot that and the result will be shown. 
+Then you enter several analysis parameters (there is an interogation button to have explanation about these parameters). After you have to click on conversion button.
+Subsequently you select a molecule in the library or you enter new coefficients.
+![image](https://user-images.githubusercontent.com/80101412/144440495-c021b3cc-ab5b-4755-99c9-6608d77dcf3d.png)
+
+
+Download and use the AppTBB1.
+"calibration library.xlsx" are my calibration datas. You may uptdate this file to use your own calibration.
