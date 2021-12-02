@@ -1,12 +1,14 @@
 # TBB1 introduction
 3D mapping of the Thickness by Bi1+
 
-In ToF-SIMS analysis, it has been shown that the substrate signal (Si+ in our case) is exponentially dependent of the material thickness over the substrate [1]. Therefore, to effectively measure the thickness on of thin films, an image of the substrate signal Si+ can be obtained using Bi1 + primary ions (Fig. 1A). Using a calibration (Fig. 1B) conducted the molecule reference samples of known thickness (ellipsometry or other technique), these Si+ ion images can transformed in 3D maps of the deposited thickness. The example shown figure 1 illustrates the 3D map thickness of a lysozyme layer on silicon.
+In ToF-SIMS analysis, it has been shown that the substrate signal (Si+ in our case) is exponentially dependent of the material thickness over the substrate [1]. Therefore, to effectively measure the thickness of thin films or deposits, an image of the substrate signal Si+ can be obtained using Bi1 + primary ions (Fig. 1B). Using a calibration (Fig. 1A) conducted the molecule reference samples of known thickness (ellipsometry or other technique), these Si+ ion images can transformed in 3D maps of the deposited thickness. The example shown figure 1 illustrates the 3D map thickness of a lysozyme layer on silicon.
 
-Since the construction of these 3D maps from Si+ ion images is not straightforward and involves several parameters and data processing, 2 platforms were developped. These platforms that were developed (Thickness By Bi1) allow to load the analysis images, perform smoothing, calibration, normalization and manage the thickness mapping in a user friendly way. Two verion are available. One is in python (pyTBB1) and the other one in MATLAB (AppTBB1).
+Since the construction of these 3D maps from Si+ ion counts images is not straightforward and involves several parameters and data processing, 2 platforms were developped. These platforms (TBB1, Thickness By Bi1) allow to load the analysis images, perform smoothing, calibration, normalization and manage the thickness mapping in a user friendly way. Two verions are available. One is in python (pyTBB1) and the other one in MATLAB (AppTBB1).
 
-![image](https://user-images.githubusercontent.com/80101412/144432057-2af652da-ca4e-40cb-b0a9-ac99995c13d0.png)
-*Fig. 1. Method for the thickness mapping. First Si+ is imaged (A). Then, the 3D thickness map (c) is plotted using the platforms and the calibration curve (B) for a specific molecule (lysozyme in this case).*
+Accordingly, the purpose of these platforms is to build 3D thickness map of films from the underneath substrate ion image obtain by ToF-SIMS (Bi1+)
+
+![image](https://user-images.githubusercontent.com/80101412/144455579-04532ae2-d838-4584-901c-ac50b996ffb8.png)
+*Fig. 1. Method for the thickness mapping. Thickness calibration curve (lysozyme in this case) (A). Then, the 3D thickness map (c) is plotted using the platforms and Si+ ion images obtained by ToF-SIMS.*
 
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
 
