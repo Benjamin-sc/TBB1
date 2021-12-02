@@ -7,7 +7,7 @@ Since the construction of these 3D maps from Si+ ion counts images is not straig
 
 Accordingly, the purpose of these platforms is to build 3D thickness map of films from the underneath substrate ion image obtain by ToF-SIMS (Bi1+)
 
-![image](https://user-images.githubusercontent.com/80101412/144455579-04532ae2-d838-4584-901c-ac50b996ffb8.png)
+![image](https://user-images.githubusercontent.com/80101412/144456330-4dd7f3f3-0f43-4420-b7b9-d913a85103e2.png)
 *Fig. 1. Method for the thickness mapping. Thickness calibration curve (lysozyme in this case) (A). Then, the 3D thickness map (c) is plotted using the platforms and Si+ ion images obtained by ToF-SIMS.*
 
 [1] A. Delcorte et al., Surf. Sci., vol. 366, no. 1, pp. 149–165, 1996.
