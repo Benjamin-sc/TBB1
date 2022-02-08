@@ -1,11 +1,11 @@
 # TBB1 introduction
 3D mapping of the thin film thickness using Bi<sub>1</sub><sup>+</sup>  beam (Thickness By Bi1)
 
-In ToF-SIMS analysis, it has been shown that the substrate signal (Si<sup>+</sup> in our case) is exponentially dependent of the material thickness over the substrate [1]. Therefore, to effectively measure the thickness of thin films or deposits, an image of the substrate signal Si<sup>+</sup> can be obtained using Bi<sub>1</sub><sup>+</sup> primary ions (Fig. 1B). Using a calibration (Fig. 1A) performed on molecular reference samples of known thickness (ellipsometry or other technique), these Si<sup>+</sup> ion images can be transformed in 3D maps of the deposited thickness. The example in Figure 1 illustrates the 3D map thickness of a lysozyme layer on silicon.
+Measuring thin film thicknesses of a few nanometers is not always easy. In ToF-SIMS analysis, it has been shown that the substrate signal (Si<sup>+</sup> in our case) is exponentially dependent of the material thickness over the substrate [1]. Indeed, using a Bi<sub>1</sub><sup>+</sup> analysis beam, it is possible to construct a calibration curve relating the substrate Si<sup>+</sup> signal to the thickness of the thin film (Fig. 1A, measured by ellipsometry). Once the calibration is performed, an Si<sup>+</sup> ion signal image of the sample surface can be recorded (Fig. 1B) and a 3D map of the film thickness above the substrate can be created (Fig. 1C). The example in Figure 1 illustrates the 3D map thickness of a lysozyme layer on silicon.
 
-Since the construction of these 3D maps from Si<sup>+</sup> ion counts images is not straightforward and involves several parameters and data processing, 2 platforms were developed. These platforms (TBB1 stands for Thickness By Bi1) allow to load the analysis images, perform smoothing, calibration, normalization and manage the thickness mapping in a user friendly way. Two versions are available. One is in python (pyTBB1) and the other one in MATLAB (AppTBB1).
+Since the construction of these 3D maps from Si<sup>+</sup> ion counts images is not straightforward and involves several parameters and data processing, two platforms were developed. These platforms (TBB1 stands for Thickness By Bi1), allow to load the raw substrate intensity image, perform normalization, transform the Si<sup>+</sup> intensity into protein thickness using the calibration, and offer a multitude of options to display the resulting thickness maps in a user-friendly way, as shown in Figure 1C. Two versions are available; one is in python (pyTBB1) and the other one in MATLAB (AppTBB1).
 
-Accordingly, the purpose of these platforms is to build 3D thickness map of films from the underneath substrate ion image obtain by ToF-SIMS (Bi<sub>1</sub><sup>+</sup>)
+Accordingly, the purpose of these platforms is to build up 3D thickness map of films from the underneath substrate ion image obtain by ToF-SIMS (Bi<sub>1</sub><sup>+</sup>).
 
 ![image](https://user-images.githubusercontent.com/80101412/144456330-4dd7f3f3-0f43-4420-b7b9-d913a85103e2.png)
 *Fig. 1. Method for the thickness mapping. Thickness calibration curve (lysozyme in this case) (A). Then, the 3D thickness map (c) is plotted using the platforms and Si<sup>+</sup> ion images obtained by ToF-SIMS.*
@@ -14,15 +14,15 @@ Accordingly, the purpose of these platforms is to build 3D thickness map of film
 
 # Download and use the pyTBB1.
 
-Pre-steps before use it:
+Steps to take before using it:
     
-1) First, download all the files. "TBB1.png" is an illustrative image and "icon.ico" is the icon of the platform. If these files are not in the same folder as the python script, you will get an error message. 
+1) First, download all the files and save them in the same folder. "TBB1.png" is an illustrative image and "icon.ico" is the icon of the platform. If these files are not in the same folder as the python script, you will get an error message. 
     
 2) Redefine your file_path in the function pushLoadImage1 (line 449) and pushLoadImage2 (line 504). So when you load your images, the correct folder location is opened.
     
 3) Make sure you have all the necessary python libraries. Otherwise you have to install them. For example, scipy package is not always available directly in all versions.
     
-4) Update the molecular library with your coefficients and molecules (line 330 to 341). If you are not familiar with trees construction in python, you can enter new coefficients directly in the GUI (but they will not be saved for the next use).
+4) Update the molecular library with your coefficients and molecules (line 330 to 341). If you are not familiar with trees construction in python, you can enter new coefficients directly in the GUI using the check box (but they will not be saved for the next use).
     
 5) If you have problems loading images, try using the most suitable format for the images: .png.
 
@@ -32,7 +32,7 @@ Figure 2 shows the python platform. It is constructed in three containers:
 - Plot
 
 
-First you load the images (they will appear below). You load the Si<sup>+</sup> ion image and you can also load the total intensity image. The latter will be used to normalize the Si<sup>+</sup> count intensity in order to be independent of the Bi<sub>1</sub><sup>+</sup> current (from one measurement to another the current may change). Then you can smooth the 3D plot and the result will be shown. To smooth you use the slider that range from 3 to 100. A 2D convolution is applied (for more information you have a query button next to the slider).
+First you load the images (they will appear below). You load the Si<sup>+</sup> ion image and you can also load the total ion intensity image. The latter will be used to normalize the Si<sup>+</sup> count intensity in order to be independent of the Bi<sub>1</sub><sup>+</sup> current (from one measurement to another the current may change). Then you can smooth the 3D plot and the result will be shown. To smooth you use the slider that range from 3 to 100. A 2D convolution is applied (for more information you have a query button next to the slider).
 
 Then you enter several analysis parameters (there is a query button next to each one to have explanation about these parameters). After you have to click on conversion button. The pixels length and pixel intensities will be converted in Counts and mm.
 Subsequently you select a molecule in the library or you enter new coefficients (corresponding to the exponetial calibration; Counts = a.exp(-b.Thickness))
@@ -45,7 +45,7 @@ Finally, you can plot the final 3D map with the "plot" button. You can decide if
 
 # Download and use the AppTBB1.
 
-Pre-steps before use it:
+Steps to take before using it:
     
 1) First download all the files. "calibration library.xlsx" are my calibration data. You can update this file to use your own calibration.
 
